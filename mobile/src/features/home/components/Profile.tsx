@@ -1,43 +1,38 @@
-import { View, Text } from 'react-native'
-import { Image } from 'expo-image'
-
+import { View, Text, Pressable } from "react-native";
+import { HugeiconsIcon } from "@hugeicons/react-native";
+import Location01Icon from '@hugeicons/core-free-icons/Location01Icon';
+import ArrowDown01Icon from '@hugeicons/core-free-icons/ArrowDown01Icon';
+import UserIcon from '@hugeicons/core-free-icons/UserIcon';
+import { registerTokens } from "@/constants/register";
 
 const Profile = () => {
-
-  const location = require("@assets/images/home/location.png");
-
-  const addresses = [
-    {
-      label:"01", value:"irewolede"
-    }, 
-    {
-      label: "02", value:"Ajayi"
-    }
-  ]
   return (
-    <View className='flex-row '>
+    <View className="w-full flex-row items-center justify-between">
 
-      <View>
-        <Image
-          source={location}
-          style={{ width: 24, height: 24 }}
-        />
+      {/* Location Section */}
+      <Pressable className="flex-1 flex-row items-center gap-2 mr-4">
+        <HugeiconsIcon icon={Location01Icon} size={24} color="#606060" />
 
-        {/** Drop Down Design */}
+        <Text
+          style={{ fontFamily: registerTokens.fonts.regular }}
+          className="text-sm text-[#606060] shrink"
+          numberOfLines={1}
+        >
+          22, Off Tipper garage...
+        </Text>
+
+        <HugeiconsIcon icon={ArrowDown01Icon} size={20} color="#606060" />
+      </Pressable>
 
 
 
-      </View>
-
-      <View>
-        <View>
-
-        </View>
-      </View>
-
+      {/* Profile Button */}
+      <Pressable className="w-11 h-11 rounded-full border border-gray-300 items-center justify-center">
+        <HugeiconsIcon icon={UserIcon} size={20} color="#141428" />
+      </Pressable>
 
     </View>
-  )
-}
+  );
+};
 
-export default Profile
+export default Profile;

@@ -1,3 +1,4 @@
+import { registerTokens } from '@/constants/register';
 import { Pressable, Text, View } from 'react-native'
 import { GradientText } from './GradientText'
 
@@ -24,7 +25,7 @@ export function WelcomeActions({
       <Text
         className="text-[#121212]"
         style={{
-          fontFamily: 'GeistRegular',
+          fontFamily: registerTokens.fonts.regular,
           fontSize: 30 * scale,
           lineHeight: 36 * scale,
           letterSpacing: 1.2 * scale,
@@ -52,7 +53,7 @@ export function WelcomeActions({
           <Text
             className="text-[#F6F6F6]"
             style={{
-              fontFamily: 'GeistSemiBold',
+              fontFamily: registerTokens.fonts.semibold,
               fontSize: 20.562 * scale,
             }}
           >
@@ -81,7 +82,7 @@ export function WelcomeActions({
         <Text
           className="text-[#121212]"
           style={{
-            fontFamily: 'GeistRegular',
+            fontFamily: registerTokens.fonts.regular,
             fontSize: 14 * scale,
           }}
         >

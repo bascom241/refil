@@ -1,4 +1,6 @@
-import { Eye, EyeOff } from "lucide-react-native";
+import ViewIcon from '@hugeicons/core-free-icons/ViewIcon';
+import ViewOffIcon from '@hugeicons/core-free-icons/ViewOffIcon';
+import { HugeiconsIcon } from "@hugeicons/react-native";
 import { useState } from "react";
 import { Pressable, Text, TextInput, View, ActivityIndicator } from "react-native";
 
@@ -109,9 +111,9 @@ const VerifyActions = ({ contentWidth, currentStep, onNext }: Props) => {
               className="ml-2 items-center justify-center"
             >
               {showPassword ? (
-                <EyeOff size={20} color="#606060" />
+                <HugeiconsIcon icon={ViewOffIcon} size={20} color="#606060" />
               ) : (
-                <Eye size={20} color="#606060" />
+                <HugeiconsIcon icon={ViewIcon} size={20} color="#606060" />
               )}
             </Pressable>
           </View>

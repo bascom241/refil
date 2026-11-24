@@ -1,3 +1,4 @@
+import { registerTokens } from '@/constants/register';
 import { Pressable, Text, View } from "react-native";
 
 import { onboardingTokens } from "@/constants/onboarding";
@@ -31,7 +32,7 @@ export function WelcomeActions({
         <View className="items-center" style={{ width: contentWidth }}>
             <Text
                 className="text-center text-[30px] leading-9 tracking-[1.2px] text-[#121212]"
-                style={{ fontFamily: onboardingTokens.fonts.regular }}
+                style={{ fontFamily: registerTokens.fonts.regular }}
             >
                 {header}
             </Text>
@@ -52,7 +53,7 @@ export function WelcomeActions({
                 >
                     <Text
                         className="text-center text-[20px] text-[#F6F6F6]"
-                        style={{ fontFamily: onboardingTokens.fonts.semibold }}
+                        style={{ fontFamily: registerTokens.fonts.semibold }}
                     >
                         {btnText1}
                     </Text>
@@ -86,7 +87,7 @@ export function WelcomeActions({
             >
                 <Text
                     className="text-center text-[14px] text-[#121212]"
-                    style={{ fontFamily: onboardingTokens.fonts.regular }}
+                    style={{ fontFamily: registerTokens.fonts.regular }}
                 >
                     Continue as Guest?
                 </Text>

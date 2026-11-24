@@ -1,3 +1,4 @@
+import { registerTokens } from '@/constants/register';
 import { Image, Text, View } from "react-native";
 
 import { onboardingTokens } from "@/constants/onboarding";
@@ -13,7 +14,7 @@ export function BrandHeader() {
       />
       <Text
         className="mt-1.5 text-[28px] leading-[34px] tracking-[0.28px] text-[#F6F6F6]"
-        style={{ fontFamily: onboardingTokens.fonts.semibold }}
+        style={{ fontFamily: registerTokens.fonts.semibold }}
       >
         Refill
       </Text>

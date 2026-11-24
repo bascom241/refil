@@ -1,3 +1,4 @@
+import { registerTokens } from '@/constants/register';
 import { Image, Text, View } from 'react-native'
 
 type Props = {
@@ -23,7 +24,7 @@ export function BrandHeader({ scale }: Props) {
         className="text-[#F6F6F6]"
         style={{
           marginTop: 6 * scale,
-          fontFamily: 'GeistSemiBold',
+          fontFamily: registerTokens.fonts.semibold,
           fontSize: 28 * scale,
           lineHeight: 34 * scale,
           letterSpacing: 0.28 * scale,

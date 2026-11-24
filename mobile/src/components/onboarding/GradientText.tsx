@@ -1,3 +1,4 @@
+import { registerTokens } from '@/constants/register';
 import Svg, {
     Defs,
     LinearGradient,
@@ -36,7 +37,7 @@ export function GradientText({ text }: Gradient) {
                 x="35"
                 y="22"
                 textAnchor="middle"
-                fontFamily={onboardingTokens.fonts.semibold}
+                fontFamily={registerTokens.fonts.semibold}
                 fontSize={20}
                 fill="url(#loginTextGradient)"
             >

@@ -3,5 +3,9 @@
     "source.fixAll": "explicit",
     "source.organizeImports": "explicit",
     "source.sortMembers": "explicit"
+  },
+  "tailwindCSS.experimental.configFile": "src/app/global.css",
+  "editor.quickSuggestions": {
+    "strings": "on"
   }
 }

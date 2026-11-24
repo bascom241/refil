@@ -12,7 +12,9 @@ import {
     useWindowDimensions,
     View,
 } from "react-native";
-import { Eye, EyeOff } from "lucide-react-native";
+import ViewIcon from '@hugeicons/core-free-icons/ViewIcon';
+import ViewOffIcon from '@hugeicons/core-free-icons/ViewOffIcon';
+import { HugeiconsIcon } from "@hugeicons/react-native";
 import { useRouter } from "expo-router";
 
 import { BrandHeader } from "@/components/onboarding/BrandHeader";
@@ -142,9 +144,9 @@ export default function LoginScreen() {
                                         className="ml-2 items-center justify-center"
                                     >
                                         {showPassword ? (
-                                            <EyeOff size={20} color="#606060" />
+                                            <HugeiconsIcon icon={ViewOffIcon} size={20} color="#606060" />
                                         ) : (
-                                            <Eye size={20} color="#606060" />
+                                            <HugeiconsIcon icon={ViewIcon} size={20} color="#606060" />
                                         )}
                                     </Pressable>
                                 </View>

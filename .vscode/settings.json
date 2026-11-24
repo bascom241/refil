@@ -1,0 +1,8 @@
+{
+  "tailwindCSS.experimental.configFile": {
+    "mobile/src/app/global.css": "mobile/src/**"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  }
+}

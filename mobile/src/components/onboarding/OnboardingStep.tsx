@@ -1,3 +1,4 @@
+import { registerTokens } from '@/constants/register';
 import { View, Text, Pressable } from "react-native";
 import { ImageBackground } from "expo-image";
 import { LinearGradient } from "expo-linear-gradient";
@@ -60,7 +61,7 @@ const OnboardingStep = ({
           <Pressable onPress={onSkip}>
             <Text
               style={{
-                fontFamily: "RobotoBold",
+                fontFamily: registerTokens.fonts.semibold,
                 color: "white",
               }}
             >
@@ -99,7 +100,7 @@ const OnboardingStep = ({
         <Text
           className="text-center text-2xl text-black"
           style={{
-            fontFamily: "OnestMedium",
+            fontFamily: registerTokens.fonts.regular,
           }}
         >
           {title}
@@ -108,7 +109,7 @@ const OnboardingStep = ({
         <Text
           className="mt-3 text-center text-sm text-gray-600"
           style={{
-            fontFamily: "OnestMedium",
+            fontFamily: registerTokens.fonts.regular,
           }}
         >
           {description}
@@ -123,7 +124,7 @@ const OnboardingStep = ({
         >
           <Text
             style={{
-              fontFamily: "OnestBold",
+              fontFamily: registerTokens.fonts.semibold,
               color: "white",
             }}
           >

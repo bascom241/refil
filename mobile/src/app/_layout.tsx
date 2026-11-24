@@ -7,6 +7,7 @@ import { QueryProvider } from '@/providers/QueryProvider';
 import Toast from 'react-native-toast-message';
 import { useEffect } from "react";
 import { useRouter } from "expo-router";
+import { Keyboard, Pressable } from "react-native";
 import { setAuthExpiredHandler } from "@/base/axiosInstance";
 SplashScreen.preventAutoHideAsync();
 
@@ -44,14 +45,17 @@ export default function TabLayout() {
   return (
     <ThemeProvider value={DefaultTheme}>
       <QueryProvider>
+        <Pressable style={{ flex: 1 }} onPress={Keyboard.dismiss} accessible={false}>
         <Stack>
           <Stack.Screen name="index" options={{ headerShown: false }} />
           <Stack.Screen name="onboarding" options={{ headerShown: false }} />
           <Stack.Screen name='auth' options={{ headerShown: false }} />
           <Stack.Screen name="tabs" options={{headerShown: false}} />
         </Stack>
+        </Pressable>
       </QueryProvider>
       <Toast/>
     </ThemeProvider>
   );
 }
+
