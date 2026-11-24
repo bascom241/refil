@@ -1,0 +1,26 @@
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query"
+import { ReactNode, useState } from "react"
+
+interface Props {
+    children:ReactNode
+}
+
+export const QueryProvider = ({children}: Props) => {
+    const [queryClient] = useState(() => new QueryClient({
+        defaultOptions:{
+            queries:{
+                retry: 1, 
+                staleTime: 1000 * 60
+            }, 
+            mutations:{
+                retry: 1
+            }
+        }
+    }));
+
+    return (
+        <QueryClientProvider client = {queryClient}>
+            {children}
+        </QueryClientProvider >
+    )
+}

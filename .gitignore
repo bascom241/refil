@@ -1,0 +1,9 @@
+# Dependencies and generated output
+node_modules/
+server/dist/
+mobile/.expo/
+
+# Local environment files (keep the safe template)
+server/.env
+server/.env.*
+!server/.env.example

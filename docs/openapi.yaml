@@ -1,0 +1,12 @@
+openapi: 3.1.0
+info:
+  title: Refill API
+  version: 0.1.0
+  description: >-
+    API contract placeholder for the Refill server. The current Express
+    application has no mounted HTTP operations; add paths only when their
+    implementations are registered and tested.
+servers:
+  - url: http://localhost:3000
+    description: Local development server (no API operations are currently mounted)
+paths: {}
